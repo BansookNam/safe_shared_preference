@@ -38,7 +38,7 @@ class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
     private static final String BIG_INTEGER_PREFIX = "VGhpcyBpcyB0aGUgcHJlZml4IGZvciBCaWdJbnRlZ2Vy";
     private static final String DOUBLE_PREFIX = "VGhpcyBpcyB0aGUgcHJlZml4IGZvciBEb3VibGUu";
 
-    private final android.content.SharedPreferences preferences;
+    private android.content.SharedPreferences preferences;
 
     /**
      * Constructs a {@link MethodCallHandlerImpl} instance. Creates a {@link
@@ -47,7 +47,6 @@ class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
     MethodCallHandlerImpl(Context context) {
         if (context != null) {
             preferences = context.getSharedPreferences(SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE);
-
         }
     }
 
