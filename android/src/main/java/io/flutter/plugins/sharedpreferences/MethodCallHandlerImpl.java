@@ -54,7 +54,7 @@ class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
     @Override
     public void onMethodCall(MethodCall call, MethodChannel.Result result) {
         if(preferences == null){
-          result.error("Preferences is null", call.method, e);
+          result.error("Preferences is null", call.method, null);
           return;
         }
 
